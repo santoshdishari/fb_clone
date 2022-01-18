@@ -1,0 +1,51 @@
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% @user.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :last_name %><br>
+    <%= form.text_area :last_name %><br>
+    <% @user.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %><br>
+    <% @user.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :phone %><br>
+    <%= form.text_area :phone %><br>
+    <% @user.errors.full_messages_for(:phone).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <%= fields_for :address, @user.address do |address| %>
+    <div>
+     <%= address.label :city %><br>
+    <%= address.text_field :city %>
+    </div>
+  <%end%>
+
+  <div>
+    <%= form.label :password %><br>
+    <%= form.text_area :password %><br>
+    <% @user.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

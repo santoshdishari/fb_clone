@@ -1,0 +1,11 @@
+<p>First name :- <%= @user.first_name %></p>
+<p>Last name :- <%= @user.last_name %></p>
+<p>Email :- <%= @user.email %></p>
+<p>M.no :- <%= @user.phone %></p>
+<p>adsress :- <%=@user.addresses.city %>
+<ul>
+  <li><%= link_to "Edit", edit_user_path(@user) %></li>
+  <li><%= link_to "Destroy", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
