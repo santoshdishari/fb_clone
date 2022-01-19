@@ -32,10 +32,34 @@
   </div>
   <%= fields_for :address, @user.address do |address| %>
     <div>
-     <%= address.label :city %><br>
-    <%= address.text_field :city %>
+      <%= address.label :town %><br>
+      <%= address.text_field :town %>
+      
     </div>
-  <%end%>
+
+    <div>
+      <%= address.label :city %><br>
+      <%= address.text_field :city %>
+      
+    </div>
+
+    <div>
+      <%= address.label :tehsil %><br>
+      <%= address.text_field :tehsil %>
+      
+    </div>
+
+    <div>
+      <%= address.label :state %><br>
+      <%= address.text_field :state %>
+     
+    </div>
+    <div>
+      <%= address.label :pin %><br>
+      <%= address.text_field :pin %>
+      
+    </div>
+  <%end %>
 
   <div>
     <%= form.label :password %><br>

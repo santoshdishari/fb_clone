@@ -2,7 +2,13 @@
 <p>Last name :- <%= @user.last_name %></p>
 <p>Email :- <%= @user.email %></p>
 <p>M.no :- <%= @user.phone %></p>
-<p>adsress :- <%=@user.addresses.city %>
+<p>address :-</p>
+<p>town :- <%=@user.address.town %></p>
+<p>city :- <%=@user.address.city %></p>
+<p>tehsil :- <%=@user.address.tehsil %></p>
+<p>district :- <%=@user.address.district %></p>
+<p>state :- <%=@user.address.state %></p>
+<p>pin :- <%=@user.address.pin %></p>
 <ul>
   <li><%= link_to "Edit", edit_user_path(@user) %></li>
   <li><%= link_to "Destroy", user_path(@user),
